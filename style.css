@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-image: url("bg.png.jpg");
+    background-size: auto;
+}
+
+header {
+    background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.header-overlay {
+    background: rgba(254, 204, 204, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    height: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: #ff5722; /* Change color on hover */
+}
+
+p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+    border: 5px solid #4CAF50;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skills, .projects, .resume, .contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.skill {
+    margin: 20px 0;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
+}
+
+.html-css { width: 90%; background: #4CAF50; }
+.javascript { width: 80%; background: #f39c12; }
+.react { width: 75%; background: #61dafb; }
+.node { width: 70%; background: #8CC84B; }
+.git { width: 85%; background: #f1502f; }
+
+.projects {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.project-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* For positioning overlay */
+    overflow: hidden;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.project-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.project-link:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.resume-link {
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.resume-link:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.contact .socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact .socials a:hover {
+    color: #2980b9;
+    transform: scale(1.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.header-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.skill, .project-item {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background: #eee;
+    border-radius: 5px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    /* Add dynamic widths based on skill level */
+}
